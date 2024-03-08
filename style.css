@@ -1,0 +1,193 @@
+/* Arquivo style.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(images/background.jpg) no-repeat top/cover fixed;
+}
+
+header {
+    background-color: #00a0ff;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-right: 10px;
+}
+
+input {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #016dab;
+    box-shadow: 0px 0px 5px #00000062;
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+#todo, #done {
+    background-color: #fff;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px #0000004e;
+}
+
+#done-list p {
+    text-decoration: line-through;
+    background-color: #ccc;
+}
+
+h2 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #ccc;
+}
+
+li:last-child {
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+li p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+
+li span {
+    display: flex;
+}
+
+li span i {
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.edit {
+    color: #00a0ff;
+}
+
+.remove {
+    color: #ff0000;
+}
+
+.done {
+    color: #00ff00;
+}
+
+.undo {
+    color: #ff9900;
+}
+
+@media screen and (max-width: 880px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    label, button {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    input {
+        width: 200px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #form {
+        flex-direction: column;
+        gap: 4px;
+    }
+    label, button {
+        font-size: 16px;
+    }
+    button {
+        width: 100px;
+    }
+    #todo, #done {
+        width: 90%;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+
+    li p {
+        font-size: 16px;
+    }
+    li span i {
+        font-size: 18px;
+    }
+}
